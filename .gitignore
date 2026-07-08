@@ -1,0 +1,38 @@
+## .NET / build output
+bin/
+obj/
+[Dd]ebug/
+[Rr]elease/
+x64/
+x86/
+[Aa][Rr][Mm]/
+[Aa][Rr][Mm]64/
+artifacts/
+publish/
+
+## Rider / VS / VS Code
+.idea/
+.vs/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+.vscode/
+
+## Test / coverage
+[Tt]est[Rr]esult*/
+coverage*.json
+coverage*.xml
+coverage*.info
+*.coverage
+*.trx
+
+## MSBuild / NuGet
+*.binlog
+project.lock.json
+*.nuget.props
+*.nuget.targets
+
+## OS
+.DS_Store
+Thumbs.db
