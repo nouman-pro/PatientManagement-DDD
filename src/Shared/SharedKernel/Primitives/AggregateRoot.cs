@@ -6,7 +6,7 @@ namespace SharedKernel.Primitives;
 /// Consistency boundary and the only entry point for mutating the objects it owns.
 /// Records domain events that are dispatched when the aggregate is persisted.
 /// </summary>
-public abstract class AggregateRoot<TId> : Entity<TId>
+public abstract class AggregateRoot<TId> : Entity<TId>, IHasDomainEvents
     where TId : notnull
 {
     private readonly List<IDomainEvent> _domainEvents = [];
