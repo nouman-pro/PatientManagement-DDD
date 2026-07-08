@@ -1,6 +1,9 @@
+using PatientManagement.Api.Extensions;
+
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddOpenApi();
+builder.Services.AddModules(builder.Configuration);
 
 var app = builder.Build();
 
@@ -12,6 +15,8 @@ if (app.Environment.IsDevelopment())
 app.MapGet("/health", () => Results.Ok(new { status = "healthy" }))
     .WithName("HealthCheck")
     .WithTags("Diagnostics");
+
+app.MapModuleEndpoints();
 
 app.Run();
 
